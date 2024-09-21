@@ -29,10 +29,15 @@ body {
     transition: transform 1s ease-in-out;
     transform-origin: center;
     cursor: pointer;
+    outline: none;
 }
 
 .letter.open {
     transform: rotateY(180deg);
+}
+
+.letter:focus {
+    outline: none;
 }
 
 /* Estilos para ambas caras de la carta */
@@ -120,6 +125,7 @@ body {
     .letter {
         width: 250px; /* Reduce el tamaño de la carta en móviles */
         height: 400px;
+        transform-origin: center center; /* Fija el origen de la transformación al centro */
     }
 
     .front h1 {
